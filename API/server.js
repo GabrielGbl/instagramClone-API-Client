@@ -1,15 +1,6 @@
-const express = require('express');
-const bodyParser = require('body-parser');
-const mongodb = require('mongodb');
+const application = require('./config/express');
 
-const app = express();
-
-//body-parser
-app.use(bodyParser.urlencoded({extended:true}));
-app.use(bodyParser.json());
-
-const port = 8080;
-
-app.listen(port);
+const port = process.env.PORT || 8080;
+application.listen(port);
 
 console.log('Server rodando na porta: ' + port);
