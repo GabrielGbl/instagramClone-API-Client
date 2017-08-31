@@ -1,3 +1,5 @@
+const ObjectID = require('mongodb').ObjectID;
+
 module.exports.inserirPostagem = function(application, req, res){	
 
 	const Postagem = application.app.models.postagens;
@@ -5,11 +7,9 @@ module.exports.inserirPostagem = function(application, req, res){
 
 	post.save()
 		.then(function(result){
-			console.log('1');
 			res.json(result);
 		},
-		function(err){
-			console.log('2');
+		function(err){			
 			res.json(err);
 		});
 }
@@ -23,6 +23,26 @@ module.exports.getPostagens = function(application, req, res){
 			res.json(result);
 		},
 		function(err){
-			res.status(500).json(err);
+			res.json(err);
 		});
 }
+
+module.exports.getPostagemById = function(application, req, res){
+
+	const Postagem = application.app.models.postagens;
+	const _id = req.params.id;
+	Postagem.find(ObjectID(_id)).exec()
+		.then(function(result){
+			res.json(result);
+		},
+		function(err){
+			res.json(err);
+		});	
+
+}
+
+
+
+
+
+
