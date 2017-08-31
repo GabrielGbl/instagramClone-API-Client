@@ -14,5 +14,9 @@ consign()
 	.then('./app/models')
 	.into(app);
 
+app.use(function(req, res) {
+	res.status(404).send({url: req.originalUrl + ' not found'})
+});
+
 module.exports = app;
 
