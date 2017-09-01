@@ -1,0 +1,22 @@
+{
+  "name": "client instagram_clone",
+  "homepage": "https://github.com/GabrielGbl/instagramClone-API-Client",
+  "authors": [
+    "Gabriel Augusto <gabriel_gbl_05@hotmail.com>"
+  ],
+  "description": "",
+  "main": "index.js",
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.7",
+    "jquery": "^3.2.1"
+  }
+}
