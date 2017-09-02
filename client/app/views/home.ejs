@@ -12,7 +12,7 @@
                 </a>
             </div>
             <div class="incluir pull-right">
-                <img src="images/incluir.png" data-toggle="tooltip" title="Publicar" alt="Incluir">
+                <img id="publicar" src="images/incluir.png" data-toggle="tooltip" title="Publicar" alt="Incluir">
             </div>   
         </div>    
     </nav> 
@@ -21,7 +21,7 @@
         <div class="row">
             <div class="col-lg-2"></div>
             <div class="col-lg-8">
-                <div class="container-timeline" style="display:none">
+                <div class="container-timeline">
                     <div class="user">
                         <p>gabriell__augusto</p>
                     </div>
@@ -40,15 +40,14 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-2"></div>
-                <div class="col-lg-8 postagem" style="display: none">
-                        <form action="" method="POST">
-                       <input type="file" name="imagem_post">
-                        <input type="text" name="texto_post" placeholder="Escreva uma legenda">
+                <div class="col-lg-8 postagem">
+                       <input type="file" name="imagem_post" id="imagem_post" required>
+                        <input type="text" name="texto_post" id="texto_post" placeholder="Escreva uma legenda" required>
                         <div class="botoes">
                             <button id="publicar_post" class="btn-primario" type="submit">Publicar</button> 
                             <button id="cancelar" class="btn-secundario" type="button">Cancelar</button> 
-                        </div>                       
-                    </form>                    
+                        </div>          
+                    <div class="msg"></div>       
                 </div>
             <div class="col-lg-2"></div>
         </div>

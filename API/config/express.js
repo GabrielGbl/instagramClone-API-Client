@@ -1,11 +1,13 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const consign = require('consign');
+const multiParty = require('connect-multiparty');
 
 const app = express();
 
 app.use(bodyParser.urlencoded({extended:true}));
 app.use(bodyParser.json());
+app.use(multiParty());
 
 consign()
 	.include('./config/dbConnection.js')

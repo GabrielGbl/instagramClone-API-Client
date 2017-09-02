@@ -222,6 +222,7 @@ body {
 }
 
 .container-timeline {
+  display: none;
   margin: 2em 0;
   background: #FFF;
   border: #E3E3E3 solid 1px;
@@ -241,6 +242,7 @@ body {
 }
 
 .postagem {
+  display: none;
   margin: 2em 0;
   background: #FFF;
   border: #E3E3E3 solid 1px;

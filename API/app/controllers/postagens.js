@@ -1,9 +1,22 @@
 const ObjectID = require('mongodb').ObjectID;
+const fs = require('fs');
 
 module.exports.inserirPostagem = function(application, req, res){	
-
 	const Postagem = application.app.models.postagens;
-	const post = new Postagem(req.body);
+
+	res.setHeader("Access-Control-Allow-Origin", "*");
+	
+	const path_origem = req.files.imagem.path;
+	const path_destino = './uploads/' + req.files.imagem.originalFilename;
+	const url_imagem = req.files.imagem.originalFilename;
+
+	fs.rename(path_origem, path_destino, function(err){
+		if(err){
+			return res.status(500).json({error:err});		
+		}
+	});
+	
+	const post = new Postagem({imagem: url_imagem ,texto: req.body.texto});
 
 	post.save()
 		.then(function(result){
