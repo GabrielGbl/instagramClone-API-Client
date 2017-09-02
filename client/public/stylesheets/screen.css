@@ -91,20 +91,49 @@ body {
 }
 /* line 4, ../sass/components/index.scss */
 .index .imagem-login {
-  display: block;
   padding: 0;
   text-align: right;
 }
-/* line 11, ../sass/components/index.scss */
-.index .login .form-login {
+@media (max-width: 768px) {
+  /* line 4, ../sass/components/index.scss */
+  .index .imagem-login {
+    display: none;
+  }
+}
+@media (min-width: 769px) {
+  /* line 4, ../sass/components/index.scss */
+  .index .imagem-login {
+    display: block;
+  }
+}
+/* line 16, ../sass/components/index.scss */
+.index .login {
+  position: relative;
+}
+/* line 19, ../sass/components/index.scss */
+.index .login .form-login, .index .login .form-cadastro {
+  position: absolute;
   width: 350px;
   background: #FFF;
   border: #E3E3E3 solid 1px;
-  margin-top: 5rem;
   padding: 2rem;
 }
-/* line 18, ../sass/components/index.scss */
-.index .login .form-login input {
+@media (max-width: 768px) {
+  /* line 19, ../sass/components/index.scss */
+  .index .login .form-login, .index .login .form-cadastro {
+    margin: 3em auto;
+    left: 50%;
+    margin-left: -175px;
+  }
+}
+@media (min-width: 769px) {
+  /* line 19, ../sass/components/index.scss */
+  .index .login .form-login, .index .login .form-cadastro {
+    margin-top: 5em;
+  }
+}
+/* line 36, ../sass/components/index.scss */
+.index .login .form-login input, .index .login .form-cadastro input {
   width: 100%;
   padding: 10px;
   margin: 7px 0;
@@ -113,8 +142,8 @@ body {
   background: #FCFCFC;
   font-size: 0.9em;
 }
-/* line 28, ../sass/components/index.scss */
-.index .login .form-login button {
+/* line 46, ../sass/components/index.scss */
+.index .login .form-login button, .index .login .form-cadastro button {
   width: 100%;
   padding: 7px;
   margin: 7px 0;
@@ -123,34 +152,93 @@ body {
   background: #3897f0;
   font-weight: bold;
 }
-/* line 38, ../sass/components/index.scss */
-.index .login .form-login button:active {
+/* line 56, ../sass/components/index.scss */
+.index .login .form-login button:active, .index .login .form-cadastro button:active {
   background: #61AAED;
 }
-/* line 42, ../sass/components/index.scss */
-.index .login .form-login img {
+/* line 60, ../sass/components/index.scss */
+.index .login .form-login img, .index .login .form-cadastro img {
   display: block;
   margin: 0 auto;
 }
-/* line 47, ../sass/components/index.scss */
-.index .login .form-login a {
+/* line 65, ../sass/components/index.scss */
+.index .login .form-login a, .index .login .form-cadastro a {
   display: block;
   font-size: 0.8em;
   text-align: center;
   color: #3897f0;
   text-decoration: none;
 }
-/* line 56, ../sass/components/index.scss */
-.index .login .conta {
+/* line 74, ../sass/components/index.scss */
+.index .login .cadastro-conta, .index .login .login-conta {
+  position: absolute;
   width: 350px;
   text-align: center;
   background: #FFF;
   border: #E3E3E3 solid 1px;
-  margin-top: 1rem;
   padding: 2rem;
   font-size: 0.9em;
 }
-/* line 65, ../sass/components/index.scss */
-.index .login .conta a {
+@media (max-width: 768px) {
+  /* line 74, ../sass/components/index.scss */
+  .index .login .cadastro-conta, .index .login .login-conta {
+    left: 50%;
+    margin-left: -175px;
+  }
+}
+/* line 93, ../sass/components/index.scss */
+.index .login .cadastro-conta button, .index .login .login-conta button {
   color: #3897f0;
+  background: none;
+  border: none;
+}
+/* line 100, ../sass/components/index.scss */
+.index .login .form-cadastro {
+  display: none;
+}
+@media (min-width: 769px) {
+  /* line 100, ../sass/components/index.scss */
+  .index .login .form-cadastro {
+    margin: 2em 0;
+  }
+}
+/* line 106, ../sass/components/index.scss */
+.index .login .form-cadastro h2 {
+  color: #999;
+  font-weight: 600;
+  text-align: center;
+  margin: 0 40px;
+}
+/* line 114, ../sass/components/index.scss */
+.index .login .login-conta {
+  top: 26em;
+}
+@media (max-width: 768px) {
+  /* line 114, ../sass/components/index.scss */
+  .index .login .login-conta {
+    margin-top: 1em;
+  }
+}
+@media (min-width: 769px) {
+  /* line 114, ../sass/components/index.scss */
+  .index .login .login-conta {
+    margin-top: 3em;
+  }
+}
+/* line 125, ../sass/components/index.scss */
+.index .login .cadastro-conta {
+  display: none;
+  top: 33em;
+}
+@media (max-width: 768px) {
+  /* line 125, ../sass/components/index.scss */
+  .index .login .cadastro-conta {
+    margin-top: 2em;
+  }
+}
+@media (min-width: 769px) {
+  /* line 125, ../sass/components/index.scss */
+  .index .login .cadastro-conta {
+    margin-top: 1em;
+  }
 }

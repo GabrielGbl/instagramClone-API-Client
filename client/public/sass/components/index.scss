@@ -1,19 +1,37 @@
 .index{
     padding-top:1rem;
 
-    .imagem-login{        
-        display:block;
+    .imagem-login{ 
         padding:0;
         text-align:right;
+
+        @media (max-width:768px){
+            display:none; 
+        }       
+        @media (min-width:769px){
+            display:block; 
+        } 
     }
 
     .login{
-        .form-login{
+        position: relative;      
+
+        .form-login, .form-cadastro{
+            position:absolute;
             width:350px;
             background: #FFF;
-            border:#E3E3E3 solid 1px;
-            margin-top:5rem; 
+            border:#E3E3E3 solid 1px; 
             padding:2rem;
+
+            @media (max-width:768px){
+                margin:3em auto;
+                left:50%;
+                margin-left:-175px;
+            }
+
+            @media (min-width:769px){
+                margin-top:5em; 
+            }
 
             input{
                 width:100%;
@@ -53,17 +71,66 @@
             }
         }
 
-        .conta{
+        .cadastro-conta, .login-conta{
+            position:absolute;
             width:350px;
             text-align:center;
             background: #FFF;
-            border:#E3E3E3 solid 1px;
-            margin-top:1rem; 
+            border:#E3E3E3 solid 1px;           
             padding:2rem;
             font-size:0.9em;
+            
+            @media (max-width:768px){
+                left:50%;
+                margin-left:-175px;
+            }
 
-            a{
+            @media(min-width:769px){
+
+            }
+
+
+            button{
                 color:#3897f0;
+                background:none;
+                border:none;
+            }
+        }
+       
+        .form-cadastro{
+            display:none;
+            @media(min-width:769px){
+                margin:2em 0;
+            }
+
+            h2{
+                color:#999;
+                font-weight:600;
+                text-align:center;
+                margin:0 40px;
+            }            
+        }
+
+        .login-conta{
+            top:26em;
+
+            @media (max-width:768px){
+                margin-top:1em; 
+            }
+            @media (min-width:769px){
+                margin-top:3em;
+            }            
+        }
+
+        .cadastro-conta{
+           display:none;
+           top:33em;
+
+            @media (max-width:768px){
+                margin-top:2em; 
+            }
+            @media (min-width:769px){
+                margin-top:1em;
             }
         }
     }
