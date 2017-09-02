@@ -9,15 +9,14 @@ const app = express();
 app.set('view engine', 'ejs');
 app.set('views', './app/views');
 
-app.set(express.static('.app/public'));
+app.use(express.static('./public'));
 
-app.use(bodyParser.urlencoded({extended:true}));
-app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
 
 app.use(expressValidator());
 
 app.use(expressSession({
-    secret:'',
+    secret:'dasldkasojfpaojrwpoj',
     resave:false,
     saveUninitialized:false
 }));

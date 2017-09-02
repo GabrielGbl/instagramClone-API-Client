@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<% include partials/head %>
+
+<body>
+
+    <div class="container">
+        <div class="row index">
+            <div class="col-lg-6 imagem-login">
+                <picture>
+                    <figure>
+                        <img src="images/login/mobiles.png" alt="">
+                    </figure>
+                </picture>
+            </div>
+            <div class="col-lg-6 login">
+                <div class="form-login">
+                    <picture>
+                         <figure>
+                            <img src="images/login/logo.jpg" alt="">
+                        </figure>
+                    </picture>
+                    <form action="/login" method="POST">
+                        <input type="text" name="username" placeholder="Nome de usuário" required>
+                        <input type="password" name="password" placeholder="Senha" required>
+                        <button type="submit" class="btn-primary" >Entrar</button>
+                    </form>
+                    <hr>
+                    <a href="">Esqueceu a senha?</a>
+                </div>
+
+                <div class="conta">
+                    <p>Não tem uma conta? <a href="/cadastro">Cadastre-se</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
