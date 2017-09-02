@@ -1,4 +1,3 @@
-/* line 5, ../../../../../../../../../../../var/lib/gems/2.1.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -20,50 +19,41 @@ time, mark, audio, video {
   vertical-align: baseline;
 }
 
-/* line 22, ../../../../../../../../../../../var/lib/gems/2.1.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 html {
   line-height: 1;
 }
 
-/* line 24, ../../../../../../../../../../../var/lib/gems/2.1.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 ol, ul {
   list-style: none;
 }
 
-/* line 26, ../../../../../../../../../../../var/lib/gems/2.1.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 table {
   border-collapse: collapse;
   border-spacing: 0;
 }
 
-/* line 28, ../../../../../../../../../../../var/lib/gems/2.1.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 caption, th, td {
   text-align: left;
   font-weight: normal;
   vertical-align: middle;
 }
 
-/* line 30, ../../../../../../../../../../../var/lib/gems/2.1.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 q, blockquote {
   quotes: none;
 }
-/* line 103, ../../../../../../../../../../../var/lib/gems/2.1.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 q:before, q:after, blockquote:before, blockquote:after {
   content: "";
   content: none;
 }
 
-/* line 32, ../../../../../../../../../../../var/lib/gems/2.1.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 a img {
   border: none;
 }
 
-/* line 116, ../../../../../../../../../../../var/lib/gems/2.1.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
   display: block;
 }
 
-/* line 1, ../sass/components/style.scss */
 * {
   margin: 0;
   padding: 0;
@@ -72,45 +62,37 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   box-sizing: border-box;
 }
 
-/* line 7, ../sass/components/style.scss */
 html, body {
   width: 100%;
   max-width: 100%;
   height: 100%;
 }
 
-/* line 13, ../sass/components/style.scss */
 body {
-  background: #FCFCFC;
+  background: #fafafa;
   font-family: Arial;
 }
 
-/* line 1, ../sass/components/index.scss */
 .index {
   padding-top: 1rem;
 }
-/* line 4, ../sass/components/index.scss */
 .index .imagem-login {
   padding: 0;
   text-align: right;
 }
 @media (max-width: 768px) {
-  /* line 4, ../sass/components/index.scss */
   .index .imagem-login {
     display: none;
   }
 }
 @media (min-width: 769px) {
-  /* line 4, ../sass/components/index.scss */
   .index .imagem-login {
     display: block;
   }
 }
-/* line 16, ../sass/components/index.scss */
 .index .login {
   position: relative;
 }
-/* line 19, ../sass/components/index.scss */
 .index .login .form-login, .index .login .form-cadastro {
   position: absolute;
   width: 350px;
@@ -119,7 +101,6 @@ body {
   padding: 2rem;
 }
 @media (max-width: 768px) {
-  /* line 19, ../sass/components/index.scss */
   .index .login .form-login, .index .login .form-cadastro {
     margin: 3em auto;
     left: 50%;
@@ -127,22 +108,19 @@ body {
   }
 }
 @media (min-width: 769px) {
-  /* line 19, ../sass/components/index.scss */
   .index .login .form-login, .index .login .form-cadastro {
     margin-top: 5em;
   }
 }
-/* line 36, ../sass/components/index.scss */
 .index .login .form-login input, .index .login .form-cadastro input {
   width: 100%;
   padding: 10px;
   margin: 7px 0;
   border: #E3E3E3 solid 1px;
   border-radius: 3px;
-  background: #FCFCFC;
+  background: #fafafa;
   font-size: 0.9em;
 }
-/* line 46, ../sass/components/index.scss */
 .index .login .form-login button, .index .login .form-cadastro button {
   width: 100%;
   padding: 7px;
@@ -152,16 +130,13 @@ body {
   background: #3897f0;
   font-weight: bold;
 }
-/* line 56, ../sass/components/index.scss */
 .index .login .form-login button:active, .index .login .form-cadastro button:active {
-  background: #61AAED;
+  background: #67b0f4;
 }
-/* line 60, ../sass/components/index.scss */
 .index .login .form-login img, .index .login .form-cadastro img {
   display: block;
   margin: 0 auto;
 }
-/* line 65, ../sass/components/index.scss */
 .index .login .form-login a, .index .login .form-cadastro a {
   display: block;
   font-size: 0.8em;
@@ -169,7 +144,6 @@ body {
   color: #3897f0;
   text-decoration: none;
 }
-/* line 74, ../sass/components/index.scss */
 .index .login .cadastro-conta, .index .login .login-conta {
   position: absolute;
   width: 350px;
@@ -180,65 +154,125 @@ body {
   font-size: 0.9em;
 }
 @media (max-width: 768px) {
-  /* line 74, ../sass/components/index.scss */
   .index .login .cadastro-conta, .index .login .login-conta {
     left: 50%;
     margin-left: -175px;
   }
 }
-/* line 93, ../sass/components/index.scss */
 .index .login .cadastro-conta button, .index .login .login-conta button {
   color: #3897f0;
   background: none;
   border: none;
 }
-/* line 100, ../sass/components/index.scss */
 .index .login .form-cadastro {
   display: none;
 }
 @media (min-width: 769px) {
-  /* line 100, ../sass/components/index.scss */
   .index .login .form-cadastro {
     margin: 2em 0;
   }
 }
-/* line 106, ../sass/components/index.scss */
 .index .login .form-cadastro h2 {
   color: #999;
   font-weight: 600;
   text-align: center;
   margin: 0 40px;
 }
-/* line 114, ../sass/components/index.scss */
 .index .login .login-conta {
   top: 26em;
 }
 @media (max-width: 768px) {
-  /* line 114, ../sass/components/index.scss */
   .index .login .login-conta {
     margin-top: 1em;
   }
 }
 @media (min-width: 769px) {
-  /* line 114, ../sass/components/index.scss */
   .index .login .login-conta {
     margin-top: 3em;
   }
 }
-/* line 125, ../sass/components/index.scss */
 .index .login .cadastro-conta {
   display: none;
   top: 33em;
 }
 @media (max-width: 768px) {
-  /* line 125, ../sass/components/index.scss */
   .index .login .cadastro-conta {
     margin-top: 2em;
   }
 }
 @media (min-width: 769px) {
-  /* line 125, ../sass/components/index.scss */
   .index .login .cadastro-conta {
     margin-top: 1em;
   }
+}
+
+.navbar {
+  height: 80px;
+}
+
+.navbar-inverse {
+  background: #FFF;
+  border: #E3E3E3 solid 1px;
+}
+.navbar-inverse .navbar-brand {
+  padding: 0 6em;
+}
+.navbar-inverse .incluir {
+  padding: 1.5em 7em;
+}
+
+.container-timeline {
+  margin: 2em 0;
+  background: #FFF;
+  border: #E3E3E3 solid 1px;
+  border-radius: 5px;
+}
+.container-timeline .user p {
+  padding: 1.5em;
+  color: #000;
+  font-weight: 600;
+}
+.container-timeline .conteudo {
+  width: 100%;
+  height: auto;
+}
+.container-timeline .texto {
+  padding: 2em;
+}
+
+.postagem {
+  margin: 2em 0;
+  background: #FFF;
+  border: #E3E3E3 solid 1px;
+  border-radius: 5px;
+  padding: 2em;
+}
+.postagem input {
+  width: 100%;
+  padding: 10px;
+  margin: 7px 0;
+  border: #E3E3E3 solid 1px;
+  border-radius: 3px;
+  background: #fafafa;
+  font-size: 0.9em;
+}
+.postagem .botoes {
+  text-align: center;
+}
+.postagem .botoes button {
+  width: auto;
+  padding: 10px;
+  margin: 7px 0;
+  border: none;
+  border-radius: 3px;
+  font-weight: bold;
+}
+.postagem .botoes .btn-primario {
+  background: #3897f0;
+  color: #FFF;
+}
+.postagem .botoes .btn-secundario {
+  background: #fafafa;
+  color: #121212;
+  border: #E3E3E3 solid 1px;
 }

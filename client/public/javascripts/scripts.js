@@ -1,5 +1,7 @@
 $(document).ready(function(){
 
+   $('[data-toggle="tooltip"]').tooltip();
+
    $('#link-cadastro').click(function(){
        $('.form-login').css('display','none');
        $('.login-conta').css('display','none');

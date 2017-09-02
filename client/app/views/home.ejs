@@ -5,23 +5,54 @@
     
 <body>
     <nav class="navbar navbar-inverse">
-        <div class="container-fluid">
+        <div class="container">
             <div class="navbar-header">
-                <button class="navbar-toggle collapsed" data-toggle="collapse" data-target="#menu" aria-expanded="false">
-                    <span class="sr-only">Toggle Navigation</span>
-                        <span class="icon-bar"></span>    
-                        <span class="icon-bar"></span>    
-                        <span class="icon-bar"></span>    
-                </button>
-                <a class="navbar-brand" href=""></a>
+                <a class="navbar-brand" href="">
+                    <img src="images/logo-home.png">
+                </a>
             </div>
-            <div class="collapse navbar-collapse" id="menu">
-                <ul class="nav navbar-nav">
-                    
-                </ul>
-            </div>
+            <div class="incluir pull-right">
+                <img src="images/incluir.png" data-toggle="tooltip" title="Publicar" alt="Incluir">
+            </div>   
         </div>    
     </nav> 
+
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-2"></div>
+            <div class="col-lg-8">
+                <div class="container-timeline" style="display:none">
+                    <div class="user">
+                        <p>gabriell__augusto</p>
+                    </div>
+                    <div class="conteudo">
+                        
+                    </div>
+                    <div class="texto">
+                        <p>#explosãodesabor é só aqui!</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-2"></div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-2"></div>
+                <div class="col-lg-8 postagem" style="display: none">
+                        <form action="" method="POST">
+                       <input type="file" name="imagem_post">
+                        <input type="text" name="texto_post" placeholder="Escreva uma legenda">
+                        <div class="botoes">
+                            <button id="publicar_post" class="btn-primario" type="submit">Publicar</button> 
+                            <button id="cancelar" class="btn-secundario" type="button">Cancelar</button> 
+                        </div>                       
+                    </form>                    
+                </div>
+            <div class="col-lg-2"></div>
+        </div>
+    </div>
     
 </body>
 </html>
