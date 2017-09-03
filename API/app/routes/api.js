@@ -19,4 +19,8 @@ module.exports = function(application){
 	application.delete('/api/:id', function(req, res){
 		application.app.controllers.postagens.removerPostagemById(application, req, res);
 	});
+
+	application.post('/api/cadastro', function(req, res){
+		application.app.controllers.usuarios.inserirUsuario(application, req, res);
+	});
 };

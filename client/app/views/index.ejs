@@ -21,11 +21,9 @@
                                 <img src="images/login/logo.png" alt="">
                             </figure>
                         </picture>
-                        <form action="/login" method="POST">
                             <input type="text" name="username-login" placeholder="Nome de usuário" required>
                             <input type="password" name="password-login" placeholder="Senha" required>
                             <button type="submit" class="btn-primary" >Entrar</button>
-                        </form>
                         <hr>
                         <a href="">Esqueceu a senha?</a>
                 </div>         
@@ -45,13 +43,11 @@
                 
                     <hr>
                 
-                    <form action="/cadastro" method="POST">
-                        <input type="email" name="email" placeholder="Email" required>
-                       <input type="text" name="nome-completo" placeholder="Nome Completo" required>
-                       <input type="text" name="username-cadastro" placeholder="Nome de usuário" required>
-                       <input type="password" name="password-cadastro" placeholder="Senha" required>
-                       <button type="submit" class="btn-primary" >Cadastre-se</button>
-                       </form>
+                    <input type="email" name="email" id="email" placeholder="Email" required>
+                    <input type="text" name="nome-completo" id="nome-completo" placeholder="Nome Completo" required>
+                    <input type="text" name="username-cadastro" id="username-cadastro" placeholder="Nome de usuário" required>
+                    <input type="password" name="password-cadastro" id="password-cadastro" placeholder="Senha" required>
+                    <button id="btn-cadastrar" type="submit" class="btn-primary" >Cadastre-se</button>
                 </div>
                 
                 <div class="cadastro-conta">
