@@ -15,7 +15,9 @@
 }
 
 .container-timeline{
-	display: none;
+	width:100%;
+	display:none;
+	height:auto;
 	margin:2em 0;
 	background:$cor-principal;
 	border:$cor-borda solid 1px;
@@ -30,8 +32,11 @@
 	}
 
 	.conteudo{
-		width:100%;
-		height:auto;
+		img{
+			width:100%;
+			height:auto;
+			margin:0;
+		}		
 	}
 
 	.texto{
@@ -48,7 +53,8 @@
 	padding:2em;
 
 	input{
-        width:100%;
+		width:100%;
+		line-height:1.2em;
         padding:10px;
         margin:7px 0;
         border:$cor-borda solid 1px;

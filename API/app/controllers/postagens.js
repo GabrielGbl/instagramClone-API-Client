@@ -1,6 +1,21 @@
 const ObjectID = require('mongodb').ObjectID;
 const fs = require('fs');
 
+module.exports.getImagens = function(application, req, res){
+
+	const img = req.params.imagem;
+
+	fs.readFile('./uploads/' + img, function(err, conteudo){
+		if(err){
+			res.status(400).json(err);
+			return;
+		}
+		res.writeHead(200, {'content-type':'image/jpg'}, {'content-type':'image/png'})
+		res.end(conteudo);
+	});
+
+}
+
 module.exports.inserirPostagem = function(application, req, res){	
 	const Postagem = application.app.models.postagens;
 
@@ -29,6 +44,8 @@ module.exports.inserirPostagem = function(application, req, res){
 
 module.exports.getPostagens = function(application, req, res){
 	
+	res.setHeader("Access-Control-Allow-Origin", "*");
+
 	const Postagem = application.app.models.postagens;
 	
 	Postagem.find().exec()

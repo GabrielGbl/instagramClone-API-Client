@@ -114,6 +114,7 @@ body {
 }
 .index .login .form-login input, .index .login .form-cadastro input {
   width: 100%;
+  line-height: 1.2em;
   padding: 10px;
   margin: 7px 0;
   border: #E3E3E3 solid 1px;
@@ -222,7 +223,9 @@ body {
 }
 
 .container-timeline {
+  width: 100%;
   display: none;
+  height: auto;
   margin: 2em 0;
   background: #FFF;
   border: #E3E3E3 solid 1px;
@@ -233,9 +236,10 @@ body {
   color: #000;
   font-weight: 600;
 }
-.container-timeline .conteudo {
+.container-timeline .conteudo img {
   width: 100%;
   height: auto;
+  margin: 0;
 }
 .container-timeline .texto {
   padding: 2em;
@@ -251,6 +255,7 @@ body {
 }
 .postagem input {
   width: 100%;
+  line-height: 1.2em;
   padding: 10px;
   margin: 7px 0;
   border: #E3E3E3 solid 1px;
