@@ -1,0 +1,139 @@
+.index{
+    padding-top:1rem;
+
+    .imagem-login{ 
+        padding:0;
+        text-align:right;
+
+        @media (max-width:768px){
+            display:none; 
+        }       
+        @media (min-width:769px){
+            display:block; 
+        } 
+    }
+
+    .login{
+        position: relative;      
+
+        .form-login, .form-cadastro{
+            position:absolute;
+            width:350px;
+            background:$cor-principal;
+            border:$cor-borda solid 1px; 
+            padding:2rem;
+
+            @media (max-width:768px){
+                margin:3em auto;
+                left:50%;
+                margin-left:-175px;
+            }
+
+            @media (min-width:769px){
+                margin-top:5em; 
+            }
+
+            input{
+                width:100%;
+                line-height:1.2em;
+                padding:10px;
+                margin:7px 0;
+                border:$cor-borda solid 1px;
+                border-radius:3px;
+                background:$cor-fundo;
+                font-size:0.9em;
+            }
+
+            button{
+                width:100%;
+                padding:7px;
+                margin:7px 0;
+                border:none;
+                border-radius:3px;
+                background:$botao-primario;
+                font-weight:bold;
+            }
+
+            button:active{
+                background:lighten($botao-primario, 10%);
+            }
+
+            img{
+                display:block;
+                margin: 0 auto;
+            }
+
+            a{
+                display:block;
+                font-size:0.8em;
+                text-align:center;
+                color:$link;
+                text-decoration:none;
+            }
+        }
+
+        .cadastro-conta, .login-conta{
+            position:absolute;
+            width:350px;
+            text-align:center;
+            background:$cor-principal;
+            border:$cor-borda solid 1px;           
+            padding:2rem;
+            font-size:0.9em;
+            
+            @media (max-width:768px){
+                left:50%;
+                margin-left:-175px;
+            }
+
+            @media(min-width:769px){
+
+            }
+
+
+            button{
+                color:$botao-primario;
+                background:none;
+                border:none;
+            }
+        }
+       
+        .form-cadastro{
+            display:none;
+            @media(min-width:769px){
+                margin:2em 0;
+            }
+
+            h2{
+                color:$cor-fonte;
+                font-weight:600;
+                text-align:center;
+                margin:0 40px;
+            }            
+        }
+
+        .login-conta{
+            top:26em;
+
+            @media (max-width:768px){
+                margin-top:1em; 
+            }
+            @media (min-width:769px){
+                margin-top:3em;
+            }            
+        }
+
+        .cadastro-conta{
+           display:none;
+           top:33em;
+
+            @media (max-width:768px){
+                margin-top:2em; 
+            }
+            @media (min-width:769px){
+                margin-top:1em;
+            }
+        }
+    }
+    
+}

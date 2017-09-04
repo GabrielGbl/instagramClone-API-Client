@@ -1,0 +1,91 @@
+.navbar{
+    height:80px;
+}
+.navbar-inverse{
+    background: $cor-principal;
+    border:$cor-borda solid 1px;
+
+    .navbar-brand{
+        padding:0 6em;
+    }
+
+    .incluir{
+        padding:1.5em 7em;
+    }    
+}
+
+.container-timeline{
+	width:100%;
+	display:none;
+	height:auto;
+	margin:2em 0;
+	background:$cor-principal;
+	border:$cor-borda solid 1px;
+	border-radius:5px;
+	
+	.user{
+		p{
+			padding:1.5em;
+			color:#000;
+			font-weight:600;
+		}
+	}
+
+	.conteudo{
+		img{
+			width:100%;
+			height:auto;
+			margin:0;
+		}		
+	}
+
+	.texto{
+		padding:2em;
+	}
+}
+
+.postagem{
+	display:none;
+	margin:2em 0;
+	background:$cor-principal;
+	border:$cor-borda solid 1px;
+	border-radius:5px;
+	padding:2em;
+
+	input{
+		width:100%;
+		line-height:1.2em;
+        padding:10px;
+        margin:7px 0;
+        border:$cor-borda solid 1px;
+        border-radius:3px;
+        background:$cor-fundo;
+        font-size:0.9em;
+    }
+    
+    .botoes{
+    	text-align: center;
+
+    	button{
+	        width:auto;
+	        padding:10px;
+	        margin:7px 0;
+	        border:none;
+	        border-radius:3px;
+	        font-weight:bold;
+   		}
+
+	    .btn-primario{
+	    	background:$botao-primario;
+	    	color:#FFF;
+	    }
+
+	    .btn-secundario{
+	    	background: $cor-fundo;
+	    	color:#121212;
+	    	border:$cor-borda solid 1px;
+	    }
+
+    }
+}
+
