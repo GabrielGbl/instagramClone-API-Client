@@ -60,6 +60,9 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
+  -moz-box-sizing: padding-box;
+  -webkit-box-sizing: padding-box;
+  box-sizing: padding-box;
 }
 
 html, body {
@@ -222,27 +225,55 @@ body {
   padding: 1.5em 7em;
 }
 
-.container-timeline {
+#container-timeline {
   width: 100%;
   display: none;
   height: auto;
+}
+#container-timeline .post-timeline {
   margin: 2em 0;
   background: #FFF;
   border: #E3E3E3 solid 1px;
   border-radius: 5px;
 }
-.container-timeline .user p {
+#container-timeline .post-timeline .user p {
   padding: 1.5em;
   color: #000;
   font-weight: 600;
 }
-.container-timeline .conteudo img {
+#container-timeline .post-timeline .conteudo img {
   width: 100%;
   height: auto;
   margin: 0;
 }
-.container-timeline .texto {
-  padding: 2em;
+#container-timeline .post-timeline .texto {
+  padding: 0.5em;
+  margin: 10px 0;
+}
+#container-timeline .post-timeline .comentarios .comentario {
+  margin: 15px 0;
+  line-height: 1.2em;
+  font-size: 1em;
+}
+#container-timeline .post-timeline .comentarios .comentario p {
+  float: left;
+  color: #000;
+  font-weight: 600;
+  margin: 0 10px;
+}
+#container-timeline .post-timeline .comentarios .input-group {
+  margin: 25px 10px 25px 10px;
+}
+#container-timeline .post-timeline .comentarios .input-group input {
+  line-height: 1.2em;
+  border: #E3E3E3 solid 1px;
+  font-size: 1em;
+}
+#container-timeline .post-timeline .comentarios .input-group button {
+  padding: 7px;
+  color: #FFF;
+  border: none;
+  background: #3897f0;
 }
 
 .postagem {

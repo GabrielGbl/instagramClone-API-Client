@@ -13,6 +13,7 @@
     "body-parser": "^1.17.2",
     "connect-multiparty": "^2.0.0",
     "consign": "^0.1.6",
+    "cors": "^2.8.4",
     "express": "^4.15.4",
     "mongodb": "^2.2.31",
     "mongoose": "^4.11.8"

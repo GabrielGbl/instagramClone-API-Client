@@ -2,7 +2,6 @@ const ObjectID = require('mongodb').ObjectID;
 const fs = require('fs');
 
 module.exports.getImagens = function(application, req, res){
-
 	const img = req.params.imagem;
 
 	fs.readFile('./uploads/' + img, function(err, conteudo){
@@ -19,8 +18,6 @@ module.exports.getImagens = function(application, req, res){
 module.exports.inserirPostagem = function(application, req, res){	
 	const Postagem = application.app.models.postagens;
 
-	res.setHeader("Access-Control-Allow-Origin", "*");
-	
 	const path_origem = req.files.imagem.path;
 	const path_destino = './uploads/' + req.files.imagem.originalFilename;
 	const url_imagem = req.files.imagem.originalFilename;
@@ -30,6 +27,8 @@ module.exports.inserirPostagem = function(application, req, res){
 			return res.status(500).json({error:err});		
 		}
 	});
+	const data = new Date();
+	
 	
 	const post = new Postagem({imagem: url_imagem ,texto: req.body.texto});
 
@@ -44,11 +43,9 @@ module.exports.inserirPostagem = function(application, req, res){
 
 module.exports.getPostagens = function(application, req, res){
 	
-	res.setHeader("Access-Control-Allow-Origin", "*");
-
 	const Postagem = application.app.models.postagens;
 	
-	Postagem.find().exec()
+	Postagem.find().sort({data: 'desc'}).exec()
 		.then(function(result){
 			res.status(200).json(result);
 		},
@@ -71,16 +68,21 @@ module.exports.getPostagemById = function(application, req, res){
 
 }
 
-module.exports.atualizarPostagemById = function(application, req, res){
-	
+module.exports.atualizarPostagemById = function(application, req, res){		
 		const Postagem = application.app.models.postagens;
-		const _id = req.params.id;
 		const dados = req.body;
-		
-		Postagem.findByIdAndUpdate(ObjectID(_id), dados).exec()
+		Postagem.findOneAndUpdate({ _id:ObjectID(req.params.id)},
+		{$push:{
+			comentarios:{
+				id_comentario: new ObjectID(),
+				comentario: dados.comentario
+			}
+		}}).exec()
 			.then(function(result){
-				res.status(200).json();
+				console.log('1');
+				res.status(200).json(result);
 			}, function(err){
+				console.log('2');
 				res.status(400).json(err);
 			});
 }

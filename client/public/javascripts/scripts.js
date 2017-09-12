@@ -1,7 +1,6 @@
 $(document).ready(function(){
 
-    carregarPostagens();
-
+    
    //BOTÃO PARA MUDAR DE FORM DO LOGIN PARA O CADASTRO 
    $('#link-cadastro').click(function(){
        $('.form-login').css('display','none');
@@ -20,13 +19,13 @@ $(document).ready(function(){
    //SCRIPT PARA MOSTRAR O FORM DE POSTAGEM
    $('#publicar').click(function(){
       $('.postagem').css('display','block');
-      $('.container-timeline').css('display','none');
+      $('#container-timeline').css('display','none');
    });
 
    //SCRIPT PARA ESCONDER O FORM DE POSTAGEM
    $('#cancelar').click(function(){
       $('.postagem').css('display','none');
-      $('.container-timeline').css('display','block');
+      $('#  container-timeline').css('display','block');
    });
 
    //CONSUMINDO A API E INSERINDO O POST
@@ -84,21 +83,62 @@ $(document).ready(function(){
 
        xhr.onload = function(){
           if(xhr.status === 200){
-             $('.container-timeline').css('display','block');
-             let data = $.parseJSON(xhr.responseText);
-             data.forEach(function(data){
+            $('#container-timeline').css('display','block');
+            let data = $.parseJSON(xhr.responseText);
+
+            data.forEach(function(data){
                 $('#container-timeline').append(
-                    '<div class="conteudo">'
-                    +'<img src="http://localhost:8080/imagens/' + data.imagem +'" />'+
-                    '</div><div class="texto"><p>'
-                        + data.texto +
-                    '</p></div>'                       
+                    '<div class="post-timeline">' +
+                        '<div class="user"><p>gabriell__augusto</p></div>' +
+                        '<div class="conteudo">' +
+                        '<img src="http://localhost:8080/imagens/' + data.imagem +'" />'+
+                        '</div><div class="texto"><p>'
+                            + data.texto +
+                        '</p></div>' +
+                        '<div class="comentarios" id="comentarios_'+data._id +'"> ' + 
+                                '<div class="input-group">' +
+                                '<input type="text" id="post_'+data._id+'" class="form-control" id="comentar" placeholder="Adicione um comentário...">' +
+                                '<span class="input-group-btn">' +
+                                '<button class="btn btn-comentar" value="'+ data._id +'"  type="button"><span class="glyphicon glyphicon-ok" aria-hidden="true"></span></button></span></div>' +
+                        '</div>' +
+                    '</div>'
                 );
+
+                if(data.comentarios != undefined){
+                    let comentarios = data.comentarios;
+                    comentarios.forEach(function(comentario){
+                        $('#comentarios_'+data._id).append(
+                            '<div class="comentario">' +
+                            '<p> usuário </p> ' + comentario.comentario +
+                            '</div>'
+                        );
+                    });
+                }
+            });
+            
+            $('.btn-comentar').click(function(){
+                let id = this.value;
+                let id_input_comentario = 'post_' + id;
+                let comentario = $('#'+id_input_comentario).val();
+                
+                let xhr = new XMLHttpRequest();
+                xhr.open('PUT', 'http://localhost:8080/api/'+id);
+                xhr.setRequestHeader('Content-Type', 'application/json');
+
+                xhr.onload = function(){
+                    if(xhr.status === 200){
+                        window.location.href = '/home';
+                    }
+                }
+                xhr.send(JSON.stringify({comentario : comentario}));                   
             });
           }
        }
        xhr.send();
    }
+
+   carregarPostagens();
+  
 
 });
 

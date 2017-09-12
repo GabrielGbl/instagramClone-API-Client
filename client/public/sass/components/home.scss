@@ -14,33 +14,69 @@
     }    
 }
 
-.container-timeline{
+#container-timeline{
 	width:100%;
 	display:none;
-	height:auto;
-	margin:2em 0;
-	background:$cor-principal;
-	border:$cor-borda solid 1px;
-	border-radius:5px;
-	
-	.user{
-		p{
-			padding:1.5em;
-			color:#000;
-			font-weight:600;
+	height:auto;	
+
+	.post-timeline{	
+		margin:2em 0;
+		background:$cor-principal;
+		border:$cor-borda solid 1px;
+		border-radius:5px;
+		
+		.user{
+			p{
+				padding:1.5em;
+				color:#000;
+				font-weight:600;
+			}
 		}
-	}
 
-	.conteudo{
-		img{
-			width:100%;
-			height:auto;
-			margin:0;
-		}		
-	}
+		.conteudo{
+			img{
+				width:100%;
+				height:auto;
+				margin:0;
+			}		
+		}
 
-	.texto{
-		padding:2em;
+		.texto{
+			padding:0.5em;
+			margin:10px 0;
+		}
+
+		.comentarios{
+			.comentario{
+				margin:15px 0;
+				line-height:1.2em;
+				font-size:1em;
+
+				p{	
+					float:left;
+					color:#000;
+					font-weight:600;
+					margin:0 10px;
+				}
+			}
+				
+			.input-group{
+				margin:25px 10px 25px 10px;
+
+				input{
+					line-height:1.2em;
+					border:$cor-borda solid 1px;
+					font-size:1em;
+				}
+
+				button{
+					padding:7px;
+					color:#FFF;
+					border:none;
+					background:$botao-primario;
+				}
+			}
+		}
 	}
 }
 
