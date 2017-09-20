@@ -97,9 +97,9 @@ $(document).ready(function(){
                         '</p></div>' +
                         '<div class="comentarios" id="comentarios_'+data._id +'"> ' + 
                                 '<div class="input-group">' +
-                                '<input type="text" id="post_'+data._id+'" class="form-control" id="comentar" placeholder="Adicione um comentário...">' +
-                                '<span class="input-group-btn">' +
-                                '<button class="btn btn-comentar" value="'+ data._id +'"  type="button"><span class="glyphicon glyphicon-ok" aria-hidden="true"></span></button></span></div>' +
+                                    '<input type="text" id="post_'+data._id+'" class="form-control" id="comentar" placeholder="Adicione um comentário...">' +
+                                    '<span class="input-group-btn">' +
+                                    '<button class="btn btn-comentar" value="'+ data._id +'"  type="button"><span class="glyphicon glyphicon-ok" aria-hidden="true"></span></button></span></div>' +
                         '</div>' +
                     '</div>'
                 );
@@ -107,13 +107,29 @@ $(document).ready(function(){
                 if(data.comentarios != undefined){
                     let comentarios = data.comentarios;
                     comentarios.forEach(function(comentario){
-                        $('#comentarios_'+data._id).append(
-                            '<div class="comentario">' +
-                            '<p> usuário </p> ' + comentario.comentario +
+                        $('#comentarios_'+data._id).append(  
+                            '<button class="btn btn-remove" value="comentario_' + comentario.id_comentario +'"  type="button"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></button></span>' +
+                            '<div class="comentario">' +                            
+                                '<p> usuário </p> ' + comentario.comentario +
                             '</div>'
                         );
                     });
                 }
+            });
+
+            $('.btn-remove').click(function(){
+                let id_comentario = this.value;                
+
+                let xhr = new XMLHttpRequest();
+                xhr.open('DELETE','http://localhost:8080/api/'+id_comentario);
+
+                xhr.onload = function(){
+                    if(xhr.status === 200){
+                        alert(xhr.responseText);
+                    }
+                }
+                xhr.send();
+
             });
             
             $('.btn-comentar').click(function(){

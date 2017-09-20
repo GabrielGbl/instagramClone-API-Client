@@ -15,7 +15,7 @@
 }
 
 #container-timeline{
-	width:100%;
+	width:auto;
 	display:none;
 	height:auto;	
 
@@ -47,18 +47,28 @@
 		}
 
 		.comentarios{
+			.btn-remove{
+				background:transparent;
+				display:inline;
+				float:left;
+				padding:0;
+				margin:0 0 0 15px;
+			}
+
 			.comentario{
 				margin:15px 0;
 				line-height:1.2em;
 				font-size:1em;
 
 				p{	
-					float:left;
+					width:auto;
+					display:inline;
 					color:#000;
 					font-weight:600;
-					margin:0 10px;
+					margin:0 5px 0 10px;
 				}
 			}
+
 				
 			.input-group{
 				margin:25px 10px 25px 10px;
