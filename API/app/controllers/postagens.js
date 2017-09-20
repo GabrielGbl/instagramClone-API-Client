@@ -79,26 +79,28 @@ module.exports.atualizarPostagemById = function(application, req, res){
 			}
 		}}).exec()
 			.then(function(result){
-				console.log('1');
 				res.status(200).json(result);
 			}, function(err){
-				console.log('2');
 				res.status(400).json(err);
 			});
 }
 
 
 module.exports.removerPostagemById = function(application, req, res){
-	
 		const Postagem = application.app.models.postagens;
-		const _id = req.params.id;
-		
-		Postagem.findByIdAndRemove(ObjectID(_id)).exec()
-		.then(function(result){
-			res.status(200).json();
-		}, function(err){
-			res.status(400).json(err);
-		});
+		const id = req.params.id;
+
+		Postagem.findOneAndUpdate({ },
+		{$pull:{
+			comentarios:{
+				id_comentario : id
+			}
+		}}, {multi:true}).exec()
+			.then(function(result){
+				res.status(200).json(result);
+			}, function(err){
+				res.status(400).json(err);
+			});
 }
 
 
